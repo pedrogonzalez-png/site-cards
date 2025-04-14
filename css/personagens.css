@@ -1,0 +1,192 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo e texto principal */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Sidebar (menu lateral) */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 15px rgba(0, 255, 213, 0.3);
+    border-right: 3px solid #00ffd5;
+    transition: width 0.3s ease;
+}
+
+.sidebar h2 {
+    font-size: 1.6rem;
+    color: #00ffd5;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 25px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    padding-left: 20px;
+    display: block;
+    border-left: 2px solid transparent;
+    font-size: 1.1rem;
+}
+
+.sidebar ul li a:hover {
+    color: #00ffd5;
+    border-left: 2px solid #00ffd5;
+    padding-left: 30px;
+}
+
+/* Conteúdo principal */
+.main-content {
+    margin-left: 270px;
+    padding: 40px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+}
+
+/* Título do conteúdo */
+.main-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    color: #00ffd5;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+/* Cards de personagens */
+.personagem-card {
+    background-color: #1e1e1e;
+    border-left: 5px solid #00ffd5;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 255, 213, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.personagem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 255, 213, 0.25);
+    border-left: 5px solid #00ffd5;
+}
+
+/* Títulos dentro dos cards */
+.personagem-card h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Texto dentro dos cards */
+.personagem-card p {
+    color: #f5f5f5;
+    margin: 10px 0;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+/* Adicionando responsividade */
+@media (max-width: 768px) {
+    /* Ajustando o menu lateral para telas menores */
+    .sidebar {
+        width: 200px;
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+        font-size: 1.4rem;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Ajustando os cards para telas menores */
+    .personagem-card {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .personagem-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .personagem-card p {
+        font-size: 1.1rem;
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Menu lateral */
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .sidebar h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustando o conteúdo principal */
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Cards em telas muito pequenas */
+    .personagem-card {
+        padding: 15px;
+        margin-bottom: 40px;
+    }
+
+    .personagem-card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .personagem-card p {
+        font-size: 1rem;
+        margin: 18px 0;
+    }
+}
+
